@@ -7,6 +7,7 @@ Instructions to this assignment can be found [here](https://it3049c.github.io/Ma
 - [ ] update the assignment checks above to the correct link
 - [ ] make sure the assignment checks pass
 - [ ] fill out the self evaluation and Reflection
+- [ ] submit the repository and the hosted github pages to Canvas
 
 ## Self-Reflection:
 
