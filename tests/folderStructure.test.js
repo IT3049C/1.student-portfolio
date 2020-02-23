@@ -6,8 +6,8 @@ describe('folder structure', function () {
     const rootTree = dirTree(`${__dirname}/..`);
     const nodes = rootTree.children.map(node => node.name);
 
-    expect(nodes.includes(`resources`));
-    expect(nodes.includes(`index.html`));
+    expect(nodes).toContain(`resources`);
+    expect(nodes).toContain(`index.html`);
     expect(rootTree.children.length).toBe(10);
   });
 
@@ -15,9 +15,9 @@ describe('folder structure', function () {
     const resourcesTree = dirTree(`${__dirname}/../resources`);
     const nodes = resourcesTree.children.map(node => node.name);
 
-    expect(nodes.includes(`images`));
-    expect(nodes.includes(`scripts`));
-    expect(nodes.includes(`styles`));
+    expect(nodes).toContain(`images`);
+    expect(nodes).toContain(`scripts`);
+    expect(nodes).toContain(`styles`);
     expect(resourcesTree.children.length).toBe(3);
   });
 
@@ -25,13 +25,13 @@ describe('folder structure', function () {
     const scriptsTree = dirTree(`${__dirname}/../resources/scripts`);
     const nodes = scriptsTree.children.map(node => node.name);
 
-    expect(nodes.includes(`index.js`));
+    expect(nodes).toContain(`index.js`);
   });
 
   test(`styles directory includes one styles.css files`, () => {
     const stylesTree = dirTree(`${__dirname}/../resources/styles`);
     const nodes = stylesTree.children.map(node => node.name);
 
-    expect(nodes.includes(`styles.css`));
+    expect(nodes).toContain(`styles.css`);
   });
 });
