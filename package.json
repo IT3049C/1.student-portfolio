@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "A student portolio",
   "scripts": {
-    "build": "npm install",
     "test": "jest"
   },
   "dependencies": {
