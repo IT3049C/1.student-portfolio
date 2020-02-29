@@ -47,10 +47,10 @@ describe('html content', function () {
     });
 
     it(`The container <div> contains 5 <div>s with the class name of (section)`, function() {
-      const elements = document.querySelectorAll('div.container > div.section');
+      const elements = document.querySelectorAll('div.container > div > div.section');
       const sectionElements = Array.from(elements).filter(ele => ele.tagName === `DIV`);
 
-      expect(sectionElements.length).toBeGreaterThanOrEqual(5);
+      expect(sectionElements.length).toBeGreaterThanOrEqual(4);
     });
 
     it(`contains 1 image of sections`, function() {
@@ -61,14 +61,14 @@ describe('html content', function () {
 
     it(`programming languages section includes a numbered list`, function() {
       const programmingLanguagesSection = document.getElementById(`programmingLanguages`);
-      const tagName = programmingLanguagesSection.children[0].tagName;
+      const tagName = programmingLanguagesSection.children[1].tagName;
 
       expect(tagName).toBe(`OL`);
     });
 
     it(`achievements section includes an unnumbered list`, function() {
       const achievementsSection = document.getElementById(`achievements`);
-      const tagName = achievementsSection.children[0].tagName;
+      const tagName = achievementsSection.children[1].tagName;
 
       expect(tagName).toBe(`UL`);
     });
