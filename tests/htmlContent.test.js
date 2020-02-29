@@ -38,9 +38,33 @@ describe('html content', function () {
       expect(styleSources.map(src => src.slice(-27))).toContain(`resources/styles/styles.css`);
     });
 
-    it.todo(`contains 5 sections`);
-    it.todo(`contains 1 image of sections`);
-    it.todo(`programming languages section includes a numbered list`);
-    it.todo(`achievemtn section includes an unnumbered list`);
+    it(`contains at least 5 divs with the class name (section)`, function() {
+      const elements = document.getElementsByTagName('div');
+      const sectionElements = Array.from(elements).filter(ele => ele.className === `section`);
+
+      expect(sectionElements.length).toBeGreaterThanOrEqual(5);
+    });
+
+    it(`contains 1 image of sections`, function() {
+      const elements = document.getElementsByTagName('img');
+
+      expect(elements.length).toBeGreaterThanOrEqual(1);
+    });
+
+    it(`programming languages section includes a numbered list`, function() {
+      const programmingLanguagesSection = document.getElementById(`programmingLanguages`);
+      const tagName = programmingLanguagesSection.children[0].tagName;
+
+      expect(tagName).toBe(`UL`);
+    });
+
+    it(`achievements section includes an unnumbered list`, function() {
+      const achievementsSection = document.getElementById(`achievements`);
+      const tagName = achievementsSection.children[0].tagName;
+      const allclasses = [].concat(...[...document.querySelectorAll('*')].map(elt => [...elt.classList]));
+      console.log(allclasses)
+
+      expect(tagName).toBe(`OL`);
+    });
 
 });

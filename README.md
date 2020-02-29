@@ -1,6 +1,6 @@
 Portfolio Assignment
 ==========================================
-![Assignment Checks](https://github.com/IT3049C/test-portfolio/workflows/Assignment%20Checks/badge.svg)
+![Assignment Checks](https://github.com/IT3049C/student-portfolio/workflows/Assignment%20Checks/badge.svg)
 
 Instructions to this assignment can be found [here](https://it3049c.github.io/Material/Assignments/1.Online_Portfolio/).
 ## Checklist:
