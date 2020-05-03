@@ -74,7 +74,7 @@ describe('html content', function () {
     });
 
     it(`uses Bootstrap`, function () {
-      const allclasses = [].concat(...[...document.querySelectorAll('*')].map(elt => [...elt.classList]));
+      const allclasses = [].concat(...[...document.querySelectorAll('*')].map(elt => ([...elt.classList])));
 
       const found = allclasses.some(r=> bootstrapClasses.includes(r))
 

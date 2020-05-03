@@ -8,17 +8,29 @@ describe('folder structure', function () {
 
     expect(nodes).toContain(`resources`);
     expect(nodes).toContain(`index.html`);
-    expect(rootTree.children.length).toBe(10);
+    const expectedNodes = [
+      `.git`,
+      `.github`,
+      `.vscode`,
+      `resources`,
+      `tests`,
+      `.gitignore`,
+      `index.html`,
+      `package.json`,
+      `README.md`
+    ];
+    expect(nodes).toEqual(expect.arrayContaining(expectedNodes));
   });
 
   test(`resources directory is properly setup`, () => {
     const resourcesTree = dirTree(`${__dirname}/../resources`);
     const nodes = resourcesTree.children.map(node => node.name);
-
-    expect(nodes).toContain(`images`);
-    expect(nodes).toContain(`scripts`);
-    expect(nodes).toContain(`styles`);
-    expect(resourcesTree.children.length).toBe(3);
+    const expectedNodes = [
+      `images`,
+      `scripts`,
+      `styles`
+    ];
+    expect(nodes).toEqual(expect.arrayContaining(expectedNodes));
   });
 
   test(`scripts directory includes one index.js files`, () => {
