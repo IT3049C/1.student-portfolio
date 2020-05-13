@@ -50,9 +50,7 @@ describe("html content", function () {
   });
 
   it(`The container <div> contains 5 <div>s with the class name of (section)`, function () {
-    const elements = document.querySelectorAll(
-      "div.container > div > div.section"
-    );
+    const elements = document.querySelectorAll("div.container div.section");
     const sectionElements = Array.from(elements).filter(
       (ele) => ele.tagName === `DIV`
     );
