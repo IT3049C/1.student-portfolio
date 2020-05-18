@@ -65,17 +65,18 @@ describe("html content", function () {
   });
 
   it(`programming languages section includes a numbered list`, function () {
-    const programmingLanguagesSection = document.getElementById(
-      `programmingLanguages`
+    const programmingLanguagesSection = document.querySelector(
+      `#programmingLanguages ol`
     );
-    const tagName = programmingLanguagesSection.children[1].tagName;
+    const tagName = programmingLanguagesSection.tagName;
 
     expect(tagName).toBe(`OL`);
   });
 
   it(`achievements section includes an unnumbered list`, function () {
-    const achievementsSection = document.getElementById(`achievements`);
-    const tagName = achievementsSection.children[1].tagName;
+    const achievementsSection = document.querySelector(`#achievements ul`);
+
+    const tagName = achievementsSection.tagName;
 
     expect(tagName).toBe(`UL`);
   });
