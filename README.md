@@ -15,7 +15,7 @@ Instructions to this assignment can be found [here](https://it3049c.github.io/Ma
 - [ ] The WebPage has all the required sections. (10 Points - 2 points each)
   - Including styles and script files using relative paths.
   - familiarity with nesting HTML tags. i.e.: a <div> containing other elements.
-  - presenting content using different HTML tags. i.e. <ol>, <ul>, <p>, <img>
+  - presenting content using different HTML tags. i.e. `<ol>`, `<ul>`, `<p>`, `<img>`
   - assigning classes and IDs properly.
   - Styling the page using classes and IDs in the css file.
 - [ ] The Web page is hosted on GitHub Pages. (3 Points)
