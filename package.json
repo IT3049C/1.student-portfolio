@@ -10,7 +10,7 @@
     "directory-tree": "^2.2.4",
     "jest": "^25.1.0",
     "jest-json-schema": "^2.1.0",
-    "lodash": "^4.17.20"
+    "lodash": "^4.17.21"
   },
   "jest": {
     "clearMocks": true,
