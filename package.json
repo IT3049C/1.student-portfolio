@@ -4,7 +4,8 @@
   "description": "A student portolio",
   "scripts": {
     "test": "jest",
-    "test:watch": "jest --watchAll"
+    "test:watch": "jest --watchAll",
+    "postinstall": "node .scripts/badge.js"
   },
   "dependencies": {
     "directory-tree": "^2.2.4",
