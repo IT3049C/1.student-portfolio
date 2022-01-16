@@ -8,9 +8,9 @@
     "postinstall": "node .scripts/badge.js"
   },
   "dependencies": {
-    "directory-tree": "^2.2.4",
-    "jest": "^25.1.0",
-    "jest-json-schema": "^2.1.0",
+    "directory-tree": "^3.0.1",
+    "jest": "^27.4.7",
+    "jest-json-schema": "^6.0.0",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
