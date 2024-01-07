@@ -27,14 +27,12 @@ describe("html content", function () {
     expect(bodyFirstElement.tagName).toContain(`DIV`);
   });
 
-  it("contains a script tag that references the script.js file in resources/scripts", function () {
+  it("contains a script tag that references the index.js file in resources/scripts", function () {
     const scriptElements = document.getElementsByTagName("script");
-    const scriptSources = Array.from(scriptElements).map((ele) => ele.src);
+    const scriptSources = Array.from(scriptElements).map((ele) => ele.getAttribute("src"));
 
     expect(scriptElements.length).toBeGreaterThanOrEqual(4);
-    expect(scriptSources.map((src) => src.slice(-26))).toContain(
-      `resources/scripts/index.js`
-    );
+    expect(scriptSources).toContain("resources/scripts/index.js");
   });
 
   it("contains a link tag that references the stylesheets in resources/styles", function () {
@@ -44,16 +42,12 @@ describe("html content", function () {
       .map((ele) => ele.href);
 
     expect(styleElements.length).toBeGreaterThanOrEqual(2);
-    expect(styleSources.map((src) => src.slice(-27))).toContain(
-      `resources/styles/styles.css`
-    );
+    expect(styleSources.map((src) => src.slice(-27))).toContain(`resources/styles/styles.css`);
   });
 
-  it(`The container <div> contains 5 <div>s with the class name of (section)`, function () {
+  it(`The container <div> contains 4 <div>s with the class name of (section)`, function () {
     const elements = document.querySelectorAll("div.container div.section");
-    const sectionElements = Array.from(elements).filter(
-      (ele) => ele.tagName === `DIV`
-    );
+    const sectionElements = Array.from(elements).filter((ele) => ele.tagName === `DIV`);
 
     expect(sectionElements.length).toBeGreaterThanOrEqual(4);
   });
@@ -65,9 +59,7 @@ describe("html content", function () {
   });
 
   it(`programming languages section includes a numbered list`, function () {
-    const programmingLanguagesSection = document.querySelector(
-      `#programmingLanguages ol`
-    );
+    const programmingLanguagesSection = document.querySelector(`#programming-languages ol`);
     const tagName = programmingLanguagesSection.tagName;
 
     expect(tagName).toBe(`OL`);
@@ -82,9 +74,7 @@ describe("html content", function () {
   });
 
   it(`uses Bootstrap`, function () {
-    const allclasses = [].concat(
-      ...[...document.querySelectorAll("*")].map((elt) => [...elt.classList])
-    );
+    const allclasses = [].concat(...[...document.querySelectorAll("*")].map((elt) => [...elt.classList]));
 
     const found = allclasses.some((r) => bootstrapClasses.includes(r));
 
