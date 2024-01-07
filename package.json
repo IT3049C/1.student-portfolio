@@ -4,8 +4,7 @@
   "description": "A student portfolio",
   "scripts": {
     "test": "jest",
-    "test:watch": "jest --watchAll",
-    "postinstall": "node .scripts/badge.js"
+    "test:watch": "jest --watchAll"
   },
   "dependencies": {
     "directory-tree": "^3.0.1",
@@ -14,9 +13,7 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "eslint": "^7.26.0",
-    "line-replace": "^2.0.1",
-    "simple-git": "^3.7.1"
+    "eslint": "^7.26.0"
   },
   "jest": {
     "clearMocks": true,
